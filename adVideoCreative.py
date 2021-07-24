@@ -7,11 +7,11 @@ from facebook_business.adobjects.advideo import AdVideo
 session = FacebookSession(
     2256808184449973,
     'bc5fa70ff4ff8dd693f804ba4f0db80c',
-    'EAAgEjhopC7UBAKRK7wafwZAxwFOG67a0IHZCU1pOTV74m3ZAAZBXvXUueZCAZCtyWJPg49qPaWSaMBLLAUI5QIdz6dQrZBtyhaqtMpIrNekvG4pkXrbRZBZAOnP3onxpoWoenbTN99TOYzqUCSPcLdMu1DyCKsijvVAZBXEOH86APqUWl6I8NWvB5SQzkZBwCb8RtEZD',
+    'EAAgEjhopC7UBAHFVP3N7AlZAQMZBIvq2QKLK3wDdVCVWJOLe0tTZCiWL1VOBsgsDA4nBS7ecoRGI39mNUaf8Aw3JwxrND14i2mfWe7Yn9LXigtQIzjBTfQ9z6rQwyNOrQBvZAEkMridAqZCJgabiWlRwJghltsQCmRZBEZAbKro9nfbElzDMPqL',
 )
 
 FacebookAdsApi.set_default_api(FacebookAdsApi(session))
-video = AdVideo(parent_id='act_534146227796276')
+video = AdVideo(parent_id='act_144169154493518')
 video_path = os.path.join(
         os.path.dirname(__file__),'ac-ak-adslots-fail.mp4'
 

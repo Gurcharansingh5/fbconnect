@@ -4,18 +4,19 @@ from facebook_business.api import FacebookAdsApi
 from facebook_business.adobjects.advideo import AdVideo
 import os
 
-access_token = 'EAAgEjhopC7UBAKRK7wafwZAxwFOG67a0IHZCU1pOTV74m3ZAAZBXvXUueZCAZCtyWJPg49qPaWSaMBLLAUI5QIdz6dQrZBtyhaqtMpIrNekvG4pkXrbRZBZAOnP3onxpoWoenbTN99TOYzqUCSPcLdMu1DyCKsijvVAZBXEOH86APqUWl6I8NWvB5SQzkZBwCb8RtEZD'
+access_token = 'EAAgEjhopC7UBAHFVP3N7AlZAQMZBIvq2QKLK3wDdVCVWJOLe0tTZCiWL1VOBsgsDA4nBS7ecoRGI39mNUaf8Aw3JwxrND14i2mfWe7Yn9LXigtQIzjBTfQ9z6rQwyNOrQBvZAEkMridAqZCJgabiWlRwJghltsQCmRZBEZAbKro9nfbElzDMPqL'
 app_secret = 'bc5fa70ff4ff8dd693f804ba4f0db80c'
 app_id = 2256808184449973
-id = 'act_534146227796276'
+id = 'act_144169154493518'
 FacebookAdsApi.init(access_token=access_token)
 
 fields = [
 ]
 create_campaign_params = {
-  'name': 'My campaign',
+  'name': 'My new campaign',
   'objective': 'LINK_CLICKS',
-  'status': 'PAUSED',
+  
+  'status': 'ACTIVE',
   'special_ad_categories': [],
 }
 campaign_id = AdAccount(id).create_campaign(
@@ -28,11 +29,11 @@ params = {
   'name': 'My Reach Ad Set',
   'optimization_goal': 'REACH',
   'billing_event': 'IMPRESSIONS',
-  'bid_amount': '2',
+  'bid_amount': '2000',
   'daily_budget': '100000',
   'campaign_id': campaign_id['id'],
   'targeting': {'geo_locations':{'countries':['US']},'facebook_positions':['feed']},
-  'status': 'PAUSED',
+  'status': 'ACTIVE',
 }
 ad_set_id = AdAccount(id).create_ad_set(
   fields=fields,
@@ -42,8 +43,8 @@ print ('ad_set_id =============='+ad_set_id['id'])
 # 525549421884373
 
 params = {
-  'name': 'Sample Creative',
-  'object_story_spec': {'page_id':102618138787955,'video_data':{'image_url':'https://avatars.githubusercontent.com/u/8880186?s=88&u=ccd6fc36312b4d34e68fff60580f18ddddc58729&v=4','video_id':525549421884373,'call_to_action':{'type':'LIKE_PAGE','value':{'page':102618138787955}}}},
+  'name': 'new Sample Creative',
+  'object_story_spec': {'page_id':100237612354550,'video_data':{'image_url':'https://avatars.githubusercontent.com/u/8880186?s=88&u=ccd6fc36312b4d34e68fff60580f18ddddc58729&v=4','video_id':527874491784763,'call_to_action':{'type':'INSTALL_MOBILE_APP','value':{'link':"https://play.google.com/store/apps/details?id=com.ludo.king"}}}},
 }
 
 adCreative = AdAccount(id).create_ad_creative(
@@ -53,14 +54,15 @@ adCreative = AdAccount(id).create_ad_creative(
 print ('adCreative_id =============='+adCreative['id'])
 
 params = {
-  'name': 'My Ad',
+  'name': 'My new Ad',
   'adset_id': ad_set_id['id'],
   'creative': {'creative_id':adCreative['id']},
-  'status': 'PAUSED',
+  'status': 'ACTIVE',
+  'object_story_spec': {'call_to_action':{'type':'LIKE_PAGE','e':{'page':"100237612354550"}}}
 }
 ad_id = AdAccount(id).create_ad(
   fields=fields,
   params=params,
 )
-print ('ad_id =============='+ad_id)
+print (ad_id)
 
