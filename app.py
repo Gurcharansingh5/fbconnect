@@ -56,7 +56,6 @@ def callback():
 	)
 
 	print(token)
-	
 	# Fetch a protected resource, i.e. user profile, via Graph API
 
 	facebook_user_data = facebook.get(
