@@ -1,12 +1,9 @@
 
 from facebook_business.adobjects.adaccount import AdAccount
 from facebook_business.api import FacebookAdsApi
-from facebook_business.adobjects.advideo import AdVideo
-import os
-
-access_token = 'EAAgEjhopC7UBAHFVP3N7AlZAQMZBIvq2QKLK3wDdVCVWJOLe0tTZCiWL1VOBsgsDA4nBS7ecoRGI39mNUaf8Aw3JwxrND14i2mfWe7Yn9LXigtQIzjBTfQ9z6rQwyNOrQBvZAEkMridAqZCJgabiWlRwJghltsQCmRZBEZAbKro9nfbElzDMPqL'
+access_token = 'EAAgEjhopC7UBAIL2J4QAEfTJxY28XZCv3lE5RF70O2vzYFTb89r8wc8zC89mpTEz3ZCJttx3H9p9bR4hNT7dZAHFLZBnEFNPDPjcPUDpzRiBoEHSvqEIKTBmvJJ6gEfg50Bv5BV7aID2NPnYnhDQWWbril5QqPnQ4ebw5rO7Vu5LyMGgugxDdP0hMzG2GBXKvUoYIjTFOwZDZD'
 app_secret = 'bc5fa70ff4ff8dd693f804ba4f0db80c'
-app_id = 2256808184449973
+app_id = 2256808184449973 
 id = 'act_144169154493518'
 FacebookAdsApi.init(access_token=access_token)
 

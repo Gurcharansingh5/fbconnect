@@ -1,0 +1,30 @@
+{
+    "data": [
+        {
+            "access_token": "EAAgEjhopC7UBALZBm3MqZCpErHuCiwvwTsVvHuzwPBsCc2KnVtF6Tl0EwVcKdFbZAZBwphaZCejekSB4g4cTSfgFkJrw27DJl2YBln6QnshXkLQ8NCzZCAQ0YAuesfmIq1ZBh6lFr16SyZBDub9cfcUFOc1bxIaKmOqqsqndytbcn0ZCmvgALcFyhQtrm5rnZB4BgZD",
+            "category": "Book shop",
+            "category_list": [
+                {
+                    "id": "197048876974331",
+                    "name": "Book shop"
+                }
+            ],
+            "name": "Dummy",
+            "id": "100237612354550",
+            "tasks": [
+                "ANALYZE",
+                "ADVERTISE",
+                "MESSAGING",
+                "MODERATE",
+                "CREATE_CONTENT",
+                "MANAGE"
+            ]
+        }
+    ],
+    "paging": {
+        "cursors": {
+            "before": "MTAwMjM3NjEyMzU0NTUw",
+            "after": "MTAwMjM3NjEyMzU0NTUw"
+        }
+    }
+}

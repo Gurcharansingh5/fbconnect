@@ -7,21 +7,20 @@ from facebook_business.adobjects.advideo import AdVideo
 session = FacebookSession(
     2256808184449973,
     'bc5fa70ff4ff8dd693f804ba4f0db80c',
-    'EAAgEjhopC7UBAHFVP3N7AlZAQMZBIvq2QKLK3wDdVCVWJOLe0tTZCiWL1VOBsgsDA4nBS7ecoRGI39mNUaf8Aw3JwxrND14i2mfWe7Yn9LXigtQIzjBTfQ9z6rQwyNOrQBvZAEkMridAqZCJgabiWlRwJghltsQCmRZBEZAbKro9nfbElzDMPqL',
+    'EAAgEjhopC7UBANIosjWMEPQ9isBFf9nJsszL0Peu5HBCw8iB84jdgT8tKemhzatMh40HZC3fzBqBrFZA42WX6vee4RGAAYiHhG94wb0e9tkgWKdf3DfX5VDPZAc2PZBU5aKZBAHejluTm4988RPCWqn3OmcAbLZC6QmQk4WAaYMacQdyKJGKyZB',
 )
-
 FacebookAdsApi.set_default_api(FacebookAdsApi(session))
 video = AdVideo(parent_id='act_144169154493518')
-video_path = os.path.join(
-        os.path.dirname(__file__),'ac-ak-adslots-fail.mp4'
 
-    )
+def get_video_creative_id_from_file(path):
+    video_path = os.path.join(os.path.dirname(__file__),path)
 
-# set video fields
-video[AdVideo.Field.filepath] = video_path
+    # set video fields
+    video[AdVideo.Field.filepath] = video_path
 
-# remote create
-video.remote_create()
-video.waitUntilEncodingReady()
+    # remote create
+    video.remote_create()
+    video.waitUntilEncodingReady()
 
-print(video)
+    print(video)
+    return video['id']
